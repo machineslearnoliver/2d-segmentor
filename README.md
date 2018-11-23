@@ -12,7 +12,7 @@ $ virtualenv segmentor
 $ source segmentor/bin/activate
 $ git clone git@github.com:machineslearnoliver/2d-segmentor.git
 $ cd 2d-segmentor
-$ pip -r requirements.txt
+$ pip install -r requirements.txt
 $ python application.py
 ```
 
