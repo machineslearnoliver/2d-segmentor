@@ -9,7 +9,7 @@ Other image sizes are currently unsuported.
 ```sh
 $ pip install virtualenv
 $ virtualenv segmentor
-$ source segmentor/venv/bin/activate
+$ source segmentor/bin/activate
 $ git clone git@github.com:machineslearnoliver/2d-segmentor.git
 $ cd 2d-segmentor
 $ pip -r requirements.txt
