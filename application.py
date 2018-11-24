@@ -4,6 +4,7 @@ from flask_cors import CORS
 import datetime
 import seg
 import os
+from PIL import Image
 
 UPLOAD_FOLDER = 'static'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
@@ -36,6 +37,9 @@ def upload_file():
     if file.filename == '':
         return redirect(request.url)
     if file and allowed_file(file.filename):
+        temp = Image.open(file)
+        file = temp.resize((256, 256))
+
         filename = secure_filename('img.png')
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         return Response('Success', status=200)
@@ -53,6 +57,9 @@ def upload_mask():
     if file.filename == '':
         return redirect(request.url)
     if file:
+        temp = Image.open(file)
+        file = temp.resize((256, 256))
+
         filename = secure_filename('mask.png')
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         return Response('Success', status=200)
