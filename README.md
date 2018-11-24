@@ -2,7 +2,6 @@
 Pre-built angular frontend served by a Flask backend.
 
 Please use the 256x256 gradient png that was supplied.
-Other image sizes are currently unsuported.
 
 ### Usage
 
