@@ -1,10 +1,9 @@
-import mimetypes
+wimport mimetypes
 import numpy as np
 import cv2 as cv
 import datetime
 import base64
 import os
-import data_uri_creator
 from datauri import DataURI 
 
 # Segment image without mask
@@ -33,7 +32,6 @@ def segment_image_with_mask(img, drawing, thresh_val):
 
     savePath = 'static/masked.png'
     filePath = 'masked.png'
-    #base64_uri = convert_file_to_base64(savePath)
     base64_uri = DataURI.from_file(savePath)
     cv.imwrite(savePath, output)
     print('wrote image')
