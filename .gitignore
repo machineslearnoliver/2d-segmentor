@@ -3,6 +3,7 @@ __pycache__/
 dist/
 tech/
 virt/
+T/
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
