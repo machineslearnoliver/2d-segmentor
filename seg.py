@@ -1,4 +1,4 @@
-wimport mimetypes
+import mimetypes
 import numpy as np
 import cv2 as cv
 import datetime
